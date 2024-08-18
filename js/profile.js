@@ -7,28 +7,49 @@ document.addEventListener("DOMContentLoaded", function() {
             setActiveIcon(); // Set the active class after footer is loaded
         });
 
-    // Popup functionality
+    // Popup functionality for Terms of Service
     const termsLink = document.querySelector('.terms-link');
-    const popup = document.getElementById('terms-popup');
-    const closeBtn = document.querySelector('.popup-content .close-btn');
+    const termsPopup = document.getElementById('terms-popup');
+    const closeTermsBtn = document.querySelector('#terms-popup .close-btn');
 
     if (termsLink) {
         termsLink.addEventListener('click', function(event) {
             event.preventDefault();
-            popup.style.display = 'flex'; // Show the popup
+            termsPopup.style.display = 'flex'; // Show the Terms popup
         });
     }
 
-    if (closeBtn) {
-        closeBtn.addEventListener('click', function() {
-            popup.style.display = 'none'; // Hide the popup
+    if (closeTermsBtn) {
+        closeTermsBtn.addEventListener('click', function() {
+            termsPopup.style.display = 'none'; // Hide the Terms popup
+        });
+    }
+
+    // Popup functionality for Privacy Policy
+    const privacyLink = document.querySelector('.privacy-link');
+    const privacyPopup = document.getElementById('privacy-popup');
+    const closePrivacyBtn = document.querySelector('#privacy-popup .close-btn');
+
+    if (privacyLink) {
+        privacyLink.addEventListener('click', function(event) {
+            event.preventDefault();
+            privacyPopup.style.display = 'flex'; // Show the Privacy popup
+        });
+    }
+
+    if (closePrivacyBtn) {
+        closePrivacyBtn.addEventListener('click', function() {
+            privacyPopup.style.display = 'none'; // Hide the Privacy popup
         });
     }
 
     // Close the popup if the user clicks outside of the popup content
     window.addEventListener('click', function(event) {
-        if (event.target === popup) {
-            popup.style.display = 'none';
+        if (event.target === termsPopup) {
+            termsPopup.style.display = 'none';
+        }
+        if (event.target === privacyPopup) {
+            privacyPopup.style.display = 'none';
         }
     });
 });
