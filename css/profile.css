@@ -203,14 +203,13 @@ body {
 
 /* Profile Container */
 .profile-container {
-    width: 100%;
-    height: 100vh; /* Full height to cover the entire screen */
-    background-color: #fafafa;
+    width: 70%; /* Adjusted to 70% of the screen width */
+    margin: 50px auto 0 auto; /* Add 20px margin at the top and center horizontally */
+    background-color: #ffffff;
     padding: 20px;
     box-sizing: border-box; /* Ensure padding is included in the element's width and height */
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
 }
 
@@ -240,9 +239,8 @@ body {
 
 /* Sections */
 .section {
-    width: 100%;
-    max-width: 500px; /* Set a max-width to keep content centered */
-    margin-bottom: 20px;
+    width: 100%; /* Full width of the container */
+    margin-bottom: 10px;
 }
 
 /* Section Headers */
@@ -252,6 +250,7 @@ body {
     color: #555;
     display: flex;
     align-items: center;
+    padding: 5px;
 }
 
 /* Section Content with Borders */
@@ -260,13 +259,7 @@ body {
     border: 2px solid #ccc; /* Add border */
     border-radius: 8px; /* Rounded corners */
     padding: 15px; /* Add some padding inside the box */
-}
-
-.settings-content {
-    background-color: #f9f9f9;
-    border-radius: 5px;
-    padding: 20px;
-    min-height: 80px;
+    box-sizing: border-box; /* Ensure padding is included in the element's width and height */
 }
 
 /* About Links */
@@ -286,6 +279,7 @@ body {
     color: #333;
     display: flex;
     align-items: center;
+    padding: 10px;
 }
 
 .about-links a i {
@@ -294,8 +288,7 @@ body {
 
 /* Logout Button */
 .logout-section {
-    width: 100%;
-    max-width: 500px; /* Set a max-width to keep content centered */
+    width: 100%; /* Full width of the container */
 }
 
 .logout-btn {
@@ -314,7 +307,44 @@ body {
 }
 
 /* Responsive adjustments */
-@media (max-width: 600px) {
+@media (max-width: 1024px) {
+    .profile-container {
+        width: 80%; /* Adjust width for tablets and smaller screens */
+        margin: 20px auto 0 auto; /* Maintain top margin for smaller screens */
+    }
+
+    .profile-pic {
+        width: 90px;
+        height: 90px;
+    }
+
+    .profile-name {
+        font-size: 22px;
+    }
+
+    .profile-email {
+        font-size: 13px;
+    }
+
+    .section-header {
+        font-size: 17px;
+    }
+
+    .about-links a {
+        font-size: 15px;
+    }
+
+    .logout-btn {
+        font-size: 15px;
+        padding: 9px;
+    }
+}
+
+@media (max-width: 768px) {
+    .profile-container {
+        width: 90%; /* Adjust width for smaller screens */
+        margin: 15px auto 0 auto; /* Slightly reduce top margin for smaller screens */
+    }
     .profile-pic {
         width: 80px;
         height: 80px;
@@ -342,30 +372,36 @@ body {
     }
 }
 
-@media (min-width: 1024px) {
+@media (max-width: 480px) {
+    .profile-container {
+        width: 95%; /* Adjust width for very small screens */
+        padding: 10px;
+        margin: 10px auto 0 auto; /* Further reduce top margin for very small screens */
+    }
+
     .profile-pic {
-        width: 120px;
-        height: 120px;
+        width: 70px;
+        height: 70px;
     }
 
     .profile-name {
-        font-size: 28px;
+        font-size: 18px;
     }
 
     .profile-email {
-        font-size: 16px;
+        font-size: 11px;
     }
 
     .section-header {
-        font-size: 20px;
+        font-size: 14px;
     }
 
     .about-links a {
-        font-size: 18px;
+        font-size: 12px;
     }
 
     .logout-btn {
-        font-size: 18px;
-        padding: 12px;
+        font-size: 12px;
+        padding: 6px;
     }
 }
