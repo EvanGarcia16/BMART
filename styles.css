@@ -33,7 +33,7 @@ footer {
     bottom: 0;
     width: 100%;
     background-color: #f8f9fa; /* Background color */
-    padding: 10px 0;
+    padding: 11px 0;
     text-align: center;
     border-top: 2px solid #f8f9fa; /* Border at the top */
 }
@@ -42,7 +42,7 @@ footer {
 .footer-buttons {
     display: flex;
     justify-content: center;
-    gap: 20px; /* Adjust space between buttons as needed */
+    gap: 50px; /* Adjust space between buttons as needed */
     flex-wrap: wrap; /* Allow buttons to wrap on smaller screens */
 }
 /* Style for the question button */
