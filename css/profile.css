@@ -264,7 +264,7 @@ body {
 .profile-container {
     width: 70%; /* Adjusted to 70% of the screen width */
     margin: 50px auto 0 auto; /* Add 20px margin at the top and center horizontally */
-    background-color: #ffffff;
+    background-color: #f4f4f4;
     padding: 20px;
     box-sizing: border-box; /* Ensure padding is included in the element's width and height */
     display: flex;
