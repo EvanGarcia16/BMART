@@ -1,0 +1,144 @@
+/* Basic reset and body styling */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #eef0f2;
+}
+
+/* Welcome screen styles */
+.welcome-screen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: black; /* Black background */
+    color: white; /* White text */
+    text-align: center;
+}
+
+.welcome-logo {
+    max-width: 80%; /* Adjust as needed */
+    height: auto;
+}
+
+.welcome-caption {
+    margin-top: 20px;
+    font-size: 24px; /* Adjust as needed */
+}
+
+/* Styling for the footer */
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #f8f9fa; /* Background color */
+    padding: 10px 0;
+    text-align: center;
+    border-top: 2px solid #f8f9fa; /* Border at the top */
+}
+
+/* Container for footer buttons */
+.footer-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Adjust space between buttons as needed */
+    flex-wrap: wrap; /* Allow buttons to wrap on smaller screens */
+}
+/* Style for the question button */
+.question-button {
+    position: fixed; /* Keep it fixed in the viewport */
+    top: 20px; /* Distance from the top */
+    right: 20px; /* Distance from the right */
+    z-index: 1000; /* Ensure it stays on top */
+}
+
+/* Default styles for footer buttons */
+.icon-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #adb5bd; /* Default color */
+    width: 80px; /* Default width */
+    transition: transform 0.3s, color 0.3s; /* Smooth transition for transform and color */
+}
+
+/* Adjusted styles for text spacing */
+.icon-button span {
+    margin-top: 10px; /* Increase margin to create more space between icon and text */
+    font-size: 12px; /* Text size remains the same */
+    text-align: center;
+}
+
+/* Default styles for icons */
+.icon-button i {
+    margin-bottom: 2px; /* Increase space between the icon and the text */
+    font-size: 20px; /* Default icon size */
+}
+
+/* Larger icon and text size for active state */
+.icon-button.active {
+    color: black; /* Color when active */
+    /* transform: scale(1.2); */
+}
+
+/* Default styles for icons */
+.icon-button i {
+    font-size: 20px; /* Default icon size */
+}
+
+/* Default styles for text */
+.icon-button span {
+    margin-top: 5px;
+    font-size: 12px; /* Default text size */
+    text-align: center;
+}
+
+/* Optional: Change color of icons and text when button is hovered or active */
+.icon-button:hover i,
+.icon-button:hover span,
+.icon-button:active i,
+.icon-button:active span {
+    color: black; /* Color on hover and active */
+}
+
+/* Optional: Add slight scale effect for non-active buttons */
+.icon-button:not(.active):active {
+    transform: scale(0.95); /* Slight scale effect for feedback */
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .icon-button {
+        width: 60px; /* Smaller width for smaller screens */
+    }
+
+    .icon-button i {
+        font-size: 18px; /* Smaller icon size */
+    }
+
+    .icon-button span {
+        font-size: 10px; /* Smaller text size */
+    }
+
+    .footer-buttons {
+        gap: 40px; /* Smaller space between buttons */
+    }
+    /* Enlarged menu container */
+    .menu-container {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #f8f9fa; /* Background color */
+    padding: 27px 0; /* Increased padding for bigger size */
+    text-align: center;
+    border-bottom: 2px solid #f8f9fa; /* Border at the top */
+    font-size: 1.2em; /* Slightly larger font size */
+}
+}
+@media (max-width: 400px) {
+    .welcome-caption {
+        font-size: 16px; /* Further reduce font size on extra-small screens */
+    }
+}
