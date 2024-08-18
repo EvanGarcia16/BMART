@@ -4,18 +4,61 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
     <title>Profile Page</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="css/profile.css">
+    <script src="js/profile.js" defer></script>
 </head>
 <body>
-    <!-- Main content of the profile page -->
-    <div class="content">
-        <!-- Your profile page content goes here -->
+    <div class="profile-container">
+        <div class="profile-header">
+            <img src="https://via.placeholder.com/100" alt="Profile Picture" class="profile-pic">
+            <h1 class="profile-name">John Doe</h1>
+            <p class="profile-email">johnDoe@gmail.com</p>
+        </div>
+
+        <!-- Settings Section -->
+        <div class="section">
+            <h2 class="section-header"><i class="fa-solid fa-gear"></i> Settings</h2>
+            <div class="section-content">
+                <h2 class="section-header"><i class="fa-solid fa-music"></i> </h2>
+                <h2 class="section-header"><i class="fa-solid fa-face-smile"></i> </h2>
+            </div>
+        </div>
+
+        <!-- About Section -->
+        <div class="section">
+            <h2 class="section-header"><i class="fa-solid fa-circle-info"></i> About</h2>
+            <div class="section-content">
+                <ul class="about-links">
+                    <li><a href="#" class="terms-link"><i class="fa-solid fa-file-contract"></i> Terms of Services</a></li>
+                    <li><a href="#"><i class="fa-solid fa-shield-halved"></i> Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="logout-section">
+            <a href="#" class="logout-btn"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
+        </div>
     </div>
 
-    <!-- Placeholder for footer -->
+    <!-- Popup container -->
+    <div id="terms-popup" class="popup-overlay">
+        <div class="popup-content">
+            <span class="close-btn">&times;</span>
+            <h2>Terms of Services</h2>
+            <p>Welcome to BMART! By accessing or using our offline AR tourism app, you agree to comply with and be bound by these Terms of Service. If you disagree with any part of these terms, please do not use our app.</p>
+            
+            <h3>1. Use of the App</h3>
+            <p>Our app is designed to provide offline augmented reality experiences for tourism purposes. You may use the app for personal, non-commercial use only. You agree not to modify, reproduce, distribute, or exploit any part of the app for any commercial purpose without prior written consent.</p>
+            
+            <h3>2. Intellectual Property</h3>
+            <p>All content, features, and functionalities of the app are owned by DcBrothers and are protected by international copyright, trademark, patent, trade secret, and other intellectual property or proprietary rights laws.</p>
+            
+            <h3>3. Limitation of Liability</h3>
+            <p>We strive to provide accurate and reliable information through our app, but we make no warranties or guarantees regarding the accuracy, completeness, or reliability of any content. We shall not be liable for any direct, indirect, incidental, special, consequential, or punitive damages arising out of your use of or inability to use the app.</p>
+        </div>
+    </div>
+
     <div id="footer-placeholder"></div>
 </body>
 </html>
